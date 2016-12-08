@@ -19,16 +19,15 @@ fs.readFile("./namelist.json", "utf-8", function(err, data){
         console.log("Read JSON File Successfully.");
      }
 });
-
 //首頁
 app.get("/",function(req,res){
 	res.sendFile(__dirname + "/index.html");
 });
 
 //接收到get請求
-app.get("/calc/:name",function(req,res){
-    var result = files[req.params.name];
-    console.log("Look for " + req.params.name + "'s Master: " + result);
+app.get("/calc/:email",function(req,res){
+    var result = files[req.params.email];
+    console.log("Look for " + req.params.email + "'s Master: " + result);
     if (result != undefined) {
         //正常輸出
         res.send("<!DOCTYPE html>" +
