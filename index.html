@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="/static/wasay.css">
+        <title>NTUIM 小天使與小主人</title>
+    </head>
+    <script>
+        function myMaster() {
+            location.href='/calc/' + document.getElementById('name').value;
+        }
+    </script>
+    <body>
+        <h1>誰，是我的小主人？</h1>
+        <p>我是  <input id="name" type="text" placeholder="Your Name" maxlength="8"></p>
+        <input id="send" type="button" value="帶我去找他" onclick="myMaster()">
+    </body>
+</html>

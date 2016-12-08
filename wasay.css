@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 100;
+  src: url(fonts/NotoSansTC-Thin.woff2) format("woff2"),
+       url(fonts/NotoSansTC-Thin.woff) format("woff"),
+       url(fonts/NotoSansTC-Thin.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 300;
+  src: url(fonts/NotoSansTC-Light.woff2) format('woff2'),
+       url(fonts/NotoSansTC-Light.woff) format('woff'),
+       url(fonts/NotoSansTC-Light.otf) format('opentype');
+}
+
+body{
+    background-image: url(/static/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+p{
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+#name{
+    border: none;
+    background-color: transparent; 
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+    width: 6rem;
+}
+
+#send{
+    font-size: 1.2rem;
+}
