@@ -1,5 +1,5 @@
 //可調整的設定
-var servicePort = 8004;
+var servicePort = 80;
 
 //引入模組
 var express = require("express");
