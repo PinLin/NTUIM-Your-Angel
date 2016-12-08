@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 100;
-  src: url(fonts/NotoSansTC-Thin.woff2) format("woff2"),
-       url(fonts/NotoSansTC-Thin.woff) format("woff"),
-       url(fonts/NotoSansTC-Thin.otf) format("opentype");
-}
-@font-face {
   font-family: 'Noto Sans TC';
   font-style: normal;
   font-weight: 300;
