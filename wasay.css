@@ -8,7 +8,8 @@
 }
 
 body{
-    background-image: url(/static/bg.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,1)), url(/static/bg.jpg);
+    background-image: linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,1)), url(/static/bg.jpg);
     background-attachment: fixed;
     background-size: cover;
     font-family: "Noto Sans TC", sans-serif;
@@ -41,4 +42,29 @@ p{
 
 #send{
     font-size: 1.2rem;
+}
+
+html, body, div, span, canvas { margin:0; padding:0; }
+
+#container {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+    /*
+    background:-o-linear-gradient(top, #000, #257eb7);
+    background:-ms-linear-gradient(top, #000, #257eb7);
+	background:-moz-linear-gradient(top, #000, #257eb7);
+	background:-webkit-linear-gradient(top, #000, #021522);
+ 	background:linear-gradient(top, #000, #257eb7);	   
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7');
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7')";*/
+}
+
+#pixie {
+  z-index:10;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
