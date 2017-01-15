@@ -3,8 +3,10 @@ var servicePort = 58787;
 
 //引入模組
 var express = require("express");
-var app = express();
 var fs = require("fs");
+
+//簡化模組名稱
+var app = express();
 
 //靜態資源目錄
 app.use("/static",express.static(__dirname));
@@ -19,26 +21,32 @@ fs.readFile("./namelist.json", "utf-8", function(err, data){
         console.log("Read JSON File Successfully.");
      }
 });
+
 //首頁
-app.get("/",function(req,res){
+app.all("/",function(req,res){
 	res.sendFile(__dirname + "/index.html");
 });
 
 //接收到get請求
-app.get("/calc/:email",function(req,res){
-    var result = files[req.params.email];
-    console.log("Look for " + req.params.email + "'s Master: " + result);
+app.route("/calc")
+    .get(function(req,res){
+//    res.send(req.query.name);
+//    return;
+    var result = files[req.query.name];
+    console.log("Someone Wants to Look for " + req.query.name + "'s Master: " + result);
     if (result != undefined) {
         //正常輸出
         res.send("<!DOCTYPE html>" +
                  "<html>" +
-                 "  <script>" +
-                 "      function helloYou() {" +
-                 "          alert('" + result + "');" +
-                 "          location.href='/';" +
-                 "      }" +
-                 "  </script>" +
-                 "  <body onload='helloYou()'/>" +
+                 "    <body>" +
+                 "        <script>" +
+                 "            function helloYou() {" +
+                 "                alert('" + result + "');" +
+                 "                location.href='/';" +
+                 "            }" +
+                 "            helloYou();" + 
+                 "        </script>" +
+                 "    </body>" + 
                  "</html>" 
                 );
     }
@@ -46,6 +54,9 @@ app.get("/calc/:email",function(req,res){
         //輸入錯名字
         res.sendFile(__dirname + "/error.html");
     }
+})
+    .post(function(req,res){
+    res.sendFile(__dirname + "/error.html");
 });
 
 //Not Found

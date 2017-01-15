@@ -5,21 +5,16 @@
     <link type="text/css" rel="stylesheet" href="/static/wasay.css">
     <title>IM Your Angel.</title>
 </head>
-<body onload="fireflies()">
+<body>
     <div id="container">
         <canvas id="pixie"></canvas>
     </div>
-    <h1>誰，是我的小主人？</h1>
-    <!--全型空白ㄎㄎㄎ-->
-    <p>　　　　我的電子郵件位址是　<input id="name" type="text" placeholder="Your Email Address" maxlength="50"></p>
-    <input id="send" type="button" value="請帶我去找他" onclick="myMaster()">
-
+    <form method="get" action="calc">
+        <h1>誰，是我的小主人？</h1>
+        <p>我的電子郵件位址是　
+            <input id="name" name="email" type="email" placeholder="Your Email Address" required/></p>
+        <input id="send" type="submit" value="請帶我去找他"/>
+    </form>
     <script src="/static/pp.js"></script>
-    <script>
-        function myMaster() {
-            location.href='/calc/' + document.getElementById('name').value;   
-        }
-        fireflies();
-    </script>
 </body>
 </html> 

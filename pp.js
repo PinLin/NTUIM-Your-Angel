@@ -105,3 +105,5 @@ function fireflies() {
         this.getY = function() { return this.y; }
     }
 }
+
+fireflies();
