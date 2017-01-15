@@ -1,4 +1,4 @@
-# 台大資管系 IM-Your-Angel
+# NTUIM IM-Your-Angel 2016
 查詢小主人der網站OwO/<br>
 然後系內活動網站竟然外包，譴責宏宏。
 
