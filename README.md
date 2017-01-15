@@ -1,5 +1,5 @@
 # 台大資管系 IM-Your-Angel
-查詢小主人der網站OwO/
+查詢小主人der網站OwO/<br>
 然後系內活動網站竟然外包，譴責宏宏。
 
 ## Requirements
@@ -15,4 +15,4 @@ or
 ```
 pm2 start app.js --watch
 ```
-服務預設將於 Port 58787 提供。
+http 服務預設將於 Port 58787 提供。
