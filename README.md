@@ -8,11 +8,11 @@
 * [express](https://github.com/expressjs/express)
 
 ## Usage
-```
+```sh
 node app.js
 ```
 or
-```
+```sh
 pm2 start app.js --watch
 ```
 http 服務預設將於 Port 58787 提供。
